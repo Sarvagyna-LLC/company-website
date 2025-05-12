@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sarvagyna AI Startup Website
 
 ## Overview
@@ -82,3 +83,6 @@ Distributed under the MIT License.
 ## Contact
 Sarvagyna - [Your Email]
 Project Link: [https://github.com/Sarwannandh67/sarvagyna-website](https://github.com/Sarwannandh67/sarvagyna-website)
+=======
+# sarvagyna-1.0
+>>>>>>> 4566239c4ae1b914204ecf4ec86302b13f743281
