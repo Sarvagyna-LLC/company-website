@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    /* Gold theme colors */
+    --primary: 32 67% 40%; /* #A86523 */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 39 79% 50%; /* #E9A319 */
+    --secondary-foreground: 240 5.9% 10%;
+    --accent: 38 92% 79%; /* #FAD59A */
+    --accent-foreground: 240 5.9% 10%;
+    --light-gold: 46 85% 89%; /* #FCEFCB */
+
+    --muted: 46 85% 96%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 39 79% 85%;
+    --input: 39 79% 85%;
+    --ring: 32 67% 40%;
+    --radius: 0.5rem;
+    --chart-1: 32 67% 40%;
+    --chart-2: 39 79% 50%;
+    --chart-3: 38 92% 79%;
+    --chart-4: 46 85% 89%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Gold theme colors for dark mode */
+    --primary: 32 67% 50%; /* Brightened #A86523 */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 39 79% 60%; /* Brightened #E9A319 */
+    --secondary-foreground: 0 0% 98%;
+    --accent: 38 92% 69%; /* Brightened #FAD59A */
+    --accent-foreground: 240 10% 3.9%;
+    --light-gold: 46 85% 79%; /* Darkened #FCEFCB */
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 32 67% 20%;
+    --input: 32 67% 20%;
+    --ring: 39 79% 60%;
+    --chart-1: 32 67% 50%;
+    --chart-2: 39 79% 60%;
+    --chart-3: 38 92% 69%;
+    --chart-4: 46 85% 79%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .bg-light-gold {
+    background-color: hsl(var(--light-gold));
+  }
+  .text-light-gold {
+    color: hsl(var(--light-gold));
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+/* Making sure motion is safe for users who prefer reduced motion */
+@media (prefers-reduced-motion) {
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-slide-in-right {
+    animation: none;
+  }
+}
