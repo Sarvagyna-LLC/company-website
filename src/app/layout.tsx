@@ -68,7 +68,6 @@ export const metadata: Metadata = {
   verification: {
     google: "google-site-verification-code", // Replace with actual code when available
   },
-  themeColor: "#FFC000",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -81,6 +80,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
+  themeColor: "#FFC000",
 };
 
 export default function RootLayout({
