@@ -168,11 +168,6 @@ export function Navbar() {
                 <span className="text-lg font-bold bg-gradient-gold bg-clip-text text-transparent">
                   Sarvagyna
                 </span>
-                <SheetTrigger>
-                  <div role="button" aria-label="Close menu" className="cursor-pointer">
-                    <X className="h-5 w-5" />
-                  </div>
-                </SheetTrigger>
               </div>
               <ul className="flex flex-col py-6 space-y-4">
                 {navItems.map((item) => (
@@ -185,7 +180,7 @@ export function Navbar() {
                         </summary>
                         <div className="pl-4 mt-2 space-y-2">
                           {item.subItems.map((subItem) => (
-                            <SheetTrigger key={subItem.name}>
+                            <SheetTrigger key={subItem.name} asChild>
                               <Link
                                 href={subItem.href}
                                 onClick={(e) => {
@@ -204,7 +199,7 @@ export function Navbar() {
                         </div>
                       </details>
                     ) : (
-                      <SheetTrigger>
+                      <SheetTrigger asChild>
                         <Link
                           href={item.href}
                           onClick={(e) => {
@@ -223,15 +218,30 @@ export function Navbar() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-auto pb-8">
-                <SheetTrigger>
-                  <Button
-                    onClick={() => scrollToSection("contact")}
-                    className="w-full bg-gradient-gold hover:opacity-90 transition-opacity"
-                  >
-                    Request Demo
-                  </Button>
-                </SheetTrigger>
+              <div className="mt-auto pb-8 px-4 space-y-4">
+                <Button
+                  onClick={() => {
+                    const sheetTrigger = document.querySelector('[data-radix-sheet-trigger]');
+                    if (sheetTrigger) {
+                      (sheetTrigger as HTMLElement).click();
+                    }
+                    scrollToSection("contact");
+                  }}
+                  className="w-full bg-gradient-gold hover:opacity-90 transition-opacity"
+                >
+                  Request Demo
+                </Button>
+                <Button 
+                  className="w-full border border-primary/20 text-primary hover:bg-primary/10"
+                  onClick={() => {
+                    const sheetTrigger = document.querySelector('[data-radix-sheet-trigger]');
+                    if (sheetTrigger) {
+                      (sheetTrigger as HTMLElement).click();
+                    }
+                  }}
+                >
+                  Close Menu
+                </Button>
               </div>
             </nav>
           </SheetContent>
