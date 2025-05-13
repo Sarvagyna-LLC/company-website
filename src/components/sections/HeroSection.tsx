@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { scrollToSection } from "@/lib/utils";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useState } from "react";
 import { ArrowRight, Zap, Shield, Brain, Download } from "lucide-react";
 import DemoRequestForm from "@/components/forms/DemoRequestForm";
@@ -65,9 +66,9 @@ export default function HeroSection() {
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[500px]">
                   <DialogHeader>
-                    <DialogTitle className="text-xl font-bold text-center mb-2">
-                      Request a Personalized Demo
-                    </DialogTitle>
+                    <VisuallyHidden>
+                      <DialogTitle>Request a Personalized Demo</DialogTitle>
+                    </VisuallyHidden>
                     <DialogDescription className="text-center">
                       Fill out the form below and our team will reach out to schedule your personalized demo.
                     </DialogDescription>

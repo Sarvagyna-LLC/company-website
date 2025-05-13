@@ -54,33 +54,56 @@ export default function Footer() {
     {
       title: "Company",
       links: [
-        { name: "About", href: "#about", isScroll: true },
-        { name: "Team", href: "#team", isScroll: true },
-        { name: "Careers", href: "#careers", isScroll: true },
-        { name: "Privacy Policy", href: "/privacy-policy" },
-        { name: "Terms of Service", href: "/terms-of-service" },
+        { name: "About Us", href: "/about", isScroll: false },
+        { name: "Our Mission", href: "#mission", isScroll: true },
+        { name: "Team", href: "/team", isScroll: false },
+        { name: "Careers", href: "/careers", isScroll: false },
+        { name: "Press", href: "/press", isScroll: false },
+        { name: "Investors", href: "#investors", isScroll: true },
       ],
     },
     {
       title: "Services",
       links: [
-        { name: "AI Agents", href: "#services", isScroll: true },
-        { name: "AI Tools", href: "#services", isScroll: true },
-        { name: "AI Research", href: "#services", isScroll: true },
-        { name: "Solutions", href: "#solutions", isScroll: true },
-        { name: "Enterprise", href: "#enterprise", isScroll: true },
+        { name: "AI Agents", href: "/services/ai-agents", isScroll: false },
+        { name: "AI Tools", href: "/services/ai-tools", isScroll: false },
+        { name: "AI Research", href: "/research", isScroll: false },
+        { name: "Enterprise Solutions", href: "/enterprise", isScroll: false },
+        { name: "Consulting", href: "/consulting", isScroll: false },
+        { name: "Custom AI Development", href: "/custom-ai", isScroll: false },
       ],
     },
     {
       title: "Resources",
       links: [
-        { name: "Blog", href: "/blog" },
-        { name: "Documentation", href: "/documentation" },
-        { name: "Case Studies", href: "#projects", isScroll: true },
-        { name: "FAQs", href: "/faqs" },
-        { name: "Contact", href: "#contact", isScroll: true },
+        { name: "Blog", href: "/blog", isScroll: false },
+        { name: "Case Studies", href: "/case-studies", isScroll: false },
+        { name: "Whitepapers", href: "/whitepapers", isScroll: false },
+        { name: "Documentation", href: "/docs", isScroll: false },
+        { name: "FAQs", href: "/faqs", isScroll: false },
+        { name: "Newsletter", href: "/newsletter", isScroll: false },
       ],
     },
+    {
+      title: "Legal",
+      links: [
+        { name: "Privacy Policy", href: "/privacy", isScroll: false },
+        { name: "Terms of Service", href: "/terms", isScroll: false },
+        { name: "Cookie Policy", href: "/cookies", isScroll: false },
+        { name: "Data Protection", href: "/data-protection", isScroll: false },
+        { name: "Accessibility", href: "/accessibility", isScroll: false },
+      ],
+    },
+    {
+      title: "Connect",
+      links: [
+        { name: "Contact Us", href: "/contact", isScroll: false },
+        { name: "Support", href: "/support", isScroll: false },
+        { name: "Book a Demo", href: "/demo", isScroll: false },
+        { name: "Partner Program", href: "/partners", isScroll: false },
+        { name: "Events", href: "/events", isScroll: false },
+      ],
+    }
   ];
 
   const handleLinkClick = (href: string, isScroll?: boolean, e?: React.MouseEvent) => {
@@ -248,14 +271,17 @@ export default function Footer() {
           </p>
 
           <div className="flex space-x-6 text-sm">
-            <Link href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
               Terms of Service
             </Link>
             <Link href="/cookies" className="text-muted-foreground hover:text-primary transition-colors">
               Cookie Policy
+            </Link>
+            <Link href="/accessibility" className="text-muted-foreground hover:text-primary transition-colors">
+              Accessibility
             </Link>
           </div>
         </div>

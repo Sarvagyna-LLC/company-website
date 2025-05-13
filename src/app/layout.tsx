@@ -2,11 +2,13 @@ import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { ClientBody } from "./ClientBody";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({ 
-  subsets: ["latin"], 
+const inter = Inter({
+  subsets: ['latin'],
   display: 'swap',
-  preload: true 
+  variable: '--font-sans',
+  weight: ['400', '500', '600', '700']
 });
 
 export const metadata: Metadata = {
@@ -74,7 +76,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
-      <body className={inter.className}>
+      <body 
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          inter.variable
+        )}
+      >
         <ClientBody>{children}</ClientBody>
       </body>
     </html>

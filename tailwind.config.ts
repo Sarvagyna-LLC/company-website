@@ -21,8 +21,9 @@ export default {
           foreground: 'hsl(var(--popover-foreground))'
         },
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))'
+          DEFAULT: '#A86523',
+          foreground: 'white',
+          hover: '#E9A319'
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
@@ -33,17 +34,17 @@ export default {
           foreground: 'hsl(var(--muted-foreground))'
         },
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))'
+          DEFAULT: '#FAD59A',
+          foreground: '#A86523',
+          light: '#FCEFCB'
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))'
         },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        'light-gold': 'hsl(var(--light-gold))',
+        border: 'rgba(168, 101, 35, 0.2)',
+        input: 'rgba(168, 101, 35, 0.1)',
+        ring: '#A86523',
         chart: {
           '1': 'hsl(var(--chart-1))',
           '2': 'hsl(var(--chart-2))',
@@ -65,29 +66,26 @@ export default {
       },
       container: {
         center: true,
-        padding: {
-          DEFAULT: '1rem',
-          sm: '2rem',
-          lg: '4rem',
-          xl: '5rem',
-          '2xl': '6rem',
-        },
+        padding: "2rem",
         screens: {
-          sm: '640px',
-          md: '768px',
-          lg: '1024px',
-          xl: '1280px',
-          '2xl': '1536px',
+          "2xl": "1400px",
         },
       },
       backgroundImage: {
         'gradient-gold': 'linear-gradient(to right, #A86523, #E9A319)',
         'hero-pattern': 'linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(252, 239, 203, 0.8))',
       },
+      boxShadow: {
+        'gold-soft': '0 4px 6px rgba(168, 101, 35, 0.1)',
+        'gold-medium': '0 6px 12px rgba(168, 101, 35, 0.15)',
+      },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',
         'slide-up': 'slideUp 0.8s ease-out',
         'slide-in-right': 'slideInRight 0.8s ease-out',
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
     }
   },

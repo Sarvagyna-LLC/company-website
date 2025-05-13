@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -33,7 +32,7 @@ const ServiceCard = ({
           <Icon className="h-6 w-6 text-primary" />
         </div>
         {badge && (
-          <Badge variant="outline" className="bg-primary/10 text-primary border-0">
+          <Badge className="bg-primary/10 text-primary border-0">
             {badge}
           </Badge>
         )}
@@ -56,7 +55,6 @@ const ServiceCard = ({
     <CardFooter>
       <Button
         onClick={onCtaClick}
-        variant="outline"
         className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-colors"
       >
         {ctaText}
@@ -187,7 +185,7 @@ export default function ServicesSection() {
                 <Button className="bg-gradient-gold hover:bg-gold-primary hover:opacity-90">
                   Contact Sales
                 </Button>
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary/10">
+                <Button className="border-primary text-primary hover:bg-primary/10">
                   Download Brochure
                 </Button>
               </div>
