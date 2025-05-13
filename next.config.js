@@ -2,11 +2,15 @@
 const nextConfig = {
   images: {
     unoptimized: true,
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     domains: [
       "source.unsplash.com",
       "images.unsplash.com",
       "ext.same-assets.com",
       "ugc.same-assets.com",
+      "sarvagyna.vercel.app",
     ],
     remotePatterns: [
       {
@@ -27,6 +31,11 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "ugc.same-assets.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "sarvagyna.vercel.app",
         pathname: "/**",
       },
     ],

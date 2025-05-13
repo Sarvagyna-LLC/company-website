@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { scrollToSection } from "@/lib/utils";
 import { useState } from "react";
 import { validateEmail } from "@/lib/utils";
@@ -128,7 +129,9 @@ export default function Footer() {
                 width={120}
                 height={40}
                 className="h-10 w-auto mb-4"
-                priority
+                priority={true}
+                loading="eager"
+                unoptimized={true}
               />
             </Link>
             <p className="text-muted-foreground mb-6 max-w-md">
