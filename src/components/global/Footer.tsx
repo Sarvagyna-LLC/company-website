@@ -240,8 +240,7 @@ export default function Footer() {
                 />
                 <Button
                   type="submit"
-                  size="icon"
-                  className="absolute right-1 top-1 h-8 w-8 bg-primary text-white hover:bg-primary/90"
+                  className="absolute right-1 top-1 h-8 w-8 p-0 flex items-center justify-center bg-primary text-white hover:bg-primary/90"
                   disabled={isSubmitting}
                   aria-label="Subscribe"
                 >
