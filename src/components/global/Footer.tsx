@@ -271,18 +271,20 @@ export default function Footer() {
           </p>
 
           <div className="flex space-x-6 text-sm">
-            <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="/cookies" className="text-muted-foreground hover:text-primary transition-colors">
-              Cookie Policy
-            </Link>
-            <Link href="/accessibility" className="text-muted-foreground hover:text-primary transition-colors">
-              Accessibility
-            </Link>
+            {[
+              { name: "Privacy Policy", href: "/privacy" },
+              { name: "Terms of Service", href: "/terms" },
+              { name: "Cookie Policy", href: "/cookies" },
+              { name: "Accessibility", href: "/accessibility" }
+            ].map((link) => (
+              <Link 
+                key={link.href} 
+                href={link.href} 
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
