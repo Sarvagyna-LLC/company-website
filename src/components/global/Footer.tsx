@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { scrollToSection } from "@/lib/utils";
@@ -121,9 +122,14 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-span-1 lg:col-span-2">
             <Link href="/">
-              <h2 className="text-2xl font-bold bg-gradient-gold bg-clip-text text-transparent mb-4">
-                Sarvagyna
-              </h2>
+              <Image
+                src="/sarvagyna-high-resolution-logo-transparent.png"
+                alt="Sarvagyna Logo"
+                width={120}
+                height={40}
+                className="h-10 w-auto mb-4"
+                priority
+              />
             </Link>
             <p className="text-muted-foreground mb-6 max-w-md">
               A tech startup specializing in AI agents, AI tools, and pioneering AI research. Building the future of enterprise technology.
@@ -133,7 +139,7 @@ export default function Footer() {
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-2 text-sm">
                 <Mail className="h-4 w-4 text-primary" />
-                <a href="mailto:info@sarvagyna.com" className="hover:text-primary transition-colors">
+                <a href="mailto:info@lago.com" className="hover:text-primary transition-colors">
                   info@sarvagyna.com
                 </a>
               </div>

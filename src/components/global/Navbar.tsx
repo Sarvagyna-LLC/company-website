@@ -98,7 +98,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-2xl font-bold bg-gradient-gold bg-clip-text text-transparent">
-            Sarvagyna
+            Lago
           </span>
         </Link>
 
@@ -166,7 +166,7 @@ export function Navbar() {
             <nav className="flex flex-col h-full">
               <div className="flex justify-between items-center py-4 border-b">
                 <span className="text-lg font-bold bg-gradient-gold bg-clip-text text-transparent">
-                  Sarvagyna
+                  Lago
                 </span>
               </div>
               <ul className="flex flex-col py-6 space-y-4">

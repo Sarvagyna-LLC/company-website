@@ -31,7 +31,7 @@ export default function HeroSection() {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
               <span className="bg-gradient-gold bg-clip-text text-transparent">
                 Sarvagyna
               </span>{" "}
@@ -40,7 +40,7 @@ export default function HeroSection() {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-lg">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-lg">
               Pioneering AI agents, tools, and research that transform how enterprises operate and innovate in the digital age.
             </p>
 
@@ -118,7 +118,7 @@ export default function HeroSection() {
                   </div>
                   <div>
                     <h4 className="font-medium">AI Agents</h4>
-                    <p className="text-sm text-muted-foreground">Autonomous AI solutions that handle complex business tasks</p>
+                    <p className="text-base text-muted-foreground">Autonomous AI solutions that handle complex business tasks</p>
                   </div>
                 </div>
 
@@ -128,7 +128,7 @@ export default function HeroSection() {
                   </div>
                   <div>
                     <h4 className="font-medium">AI Tools</h4>
-                    <p className="text-sm text-muted-foreground">Specialized applications for industry-specific challenges</p>
+                    <p className="text-base text-muted-foreground">Specialized applications for industry-specific challenges</p>
                   </div>
                 </div>
 
@@ -138,7 +138,7 @@ export default function HeroSection() {
                   </div>
                   <div>
                     <h4 className="font-medium">AI Research</h4>
-                    <p className="text-sm text-muted-foreground">Cutting-edge R&D to solve tomorrow's complex problems</p>
+                    <p className="text-base text-muted-foreground">Cutting-edge R&D to solve tomorrow's complex problems</p>
                   </div>
                 </div>
               </div>

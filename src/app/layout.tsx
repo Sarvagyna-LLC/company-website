@@ -16,6 +16,19 @@ export const metadata: Metadata = {
   description: "Sarvagyna is a tech startup specializing in AI agents, tools, and research for enterprise solutions.",
   keywords: "AI agents, AI tools, AI research, enterprise AI, Sarvagyna, artificial intelligence",
   metadataBase: new URL("https://sarvagyna.com"),
+  icons: {
+    icon: [
+      { url: "/favicon/favicon.ico", sizes: "64x64 32x32 24x24 16x16", type: "image/x-icon" },
+      { url: "/favicon/icon0.svg", type: "image/svg+xml" }
+    ],
+    apple: [
+      { url: "/favicon/apple-icon.png", type: "image/png" }
+    ],
+    other: [
+      { rel: "mask-icon", url: "/favicon/icon0.svg", color: "#FFC000" }
+    ]
+  },
+  manifest: "/favicon/manifest.json",
   openGraph: {
     title: "Sarvagyna | AI Agents, Tools, and Research",
     description: "Sarvagyna is a tech startup specializing in AI agents, tools, and research for enterprise solutions.",
@@ -55,7 +68,12 @@ export const metadata: Metadata = {
   verification: {
     google: "google-site-verification-code", // Replace with actual code when available
   },
-  manifest: "/site.webmanifest",
+  themeColor: "#FFC000",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Sarvagyna AI"
+  },
 };
 
 export const viewport: Viewport = {
@@ -72,10 +90,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      </head>
+      <head />
+
       <body 
         className={cn(
           "min-h-screen bg-background font-sans antialiased",

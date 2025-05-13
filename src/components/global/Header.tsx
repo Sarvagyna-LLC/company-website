@@ -15,6 +15,7 @@ import { scrollToSection } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
 import { navigationConfig, NavItem } from "@/lib/navigation";
+import Image from "next/image";
 
 export default function Header() {
   const router = useRouter();
@@ -64,9 +65,14 @@ export default function Header() {
       <div className="container flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <span className="text-2xl font-bold bg-gradient-gold bg-clip-text text-transparent">
-            Sarvagyna
-          </span>
+          <Image
+            src="/sarvagyna-high-resolution-logo-transparent.png"
+            alt="Sarvagyna Logo"
+            width={120}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -124,7 +130,7 @@ export default function Header() {
             onClick={() => {
               router.push('/contact');
             }}
-            aria-label="Get Started with Sarvagyna"
+            aria-label="Get Started with Lago"
           >
             Get Started
           </Button>
@@ -203,7 +209,7 @@ export default function Header() {
                     router.push('/contact');
                     setIsMobileMenuOpen(false);
                   }}
-                  aria-label="Get Started with Sarvagyna"
+                  aria-label="Get Started with Lago"
                 >
                   Get Started
                 </Button>
@@ -211,7 +217,7 @@ export default function Header() {
 
               <div className="mt-auto p-4">
                 <p className="text-sm text-muted-foreground">
-                  © {new Date().getFullYear()} Sarvagyna. All rights reserved.
+                  © {new Date().getFullYear()} Lago. All rights reserved.
                 </p>
               </div>
             </div>
