@@ -37,13 +37,9 @@ export function AccessibleDialog({
       </DialogTrigger>
       <DialogContent className={className}>
         <DialogHeader>
-          {title ? (
-            <DialogTitle>{title}</DialogTitle>
-          ) : (
-            <VisuallyHidden>
-              <DialogTitle>Dialog</DialogTitle>
-            </VisuallyHidden>
-          )}
+          <DialogTitle>
+            {title || "Dialog"}
+          </DialogTitle>
           {description && (
             <DialogDescription>{description}</DialogDescription>
           )}
