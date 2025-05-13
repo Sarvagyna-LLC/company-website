@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 32 67% 20%; /* Dark gold for text */
+    --card: 0 0% 100%;
+    --card-foreground: 32 67% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 32 67% 20%;
+
+    /* Gold theme colors */
+    --primary: 32 67% 40%; /* #A86523 */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 39 79% 50%; /* #E9A319 */
+    --secondary-foreground: 32 67% 20%;
+    --accent: 38 92% 79%; /* #FAD59A */
+    --accent-foreground: 32 67% 20%;
+    --light-gold: 46 85% 89%; /* #FCEFCB */
+
+    --muted: 38 92% 95%; /* Lighter version of accent */
+    --muted-foreground: 32 67% 40%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 32 67% 60%; /* Softer gold for borders */
+    --input: 32 67% 70%; /* Lighter gold for inputs */
+    --ring: 32 67% 40%;
+    --radius: 0.5rem;
+    --chart-1: 32 67% 40%;
+    --chart-2: 39 79% 50%;
+    --chart-3: 38 92% 79%;
+    --chart-4: 46 85% 89%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 32 20% 10%; /* Dark background */
+    --foreground: 38 92% 89%; /* Light gold for text */
+    --card: 32 20% 15%;
+    --card-foreground: 38 92% 89%;
+    --popover: 32 20% 15%;
+    --popover-foreground: 38 92% 89%;
+
+    /* Gold theme colors for dark mode */
+    --primary: 32 67% 50%; /* Brightened #A86523 */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 39 79% 60%; /* Brightened #E9A319 */
+    --secondary-foreground: 38 92% 89%;
+    --accent: 38 92% 30%; /* Darkened #FAD59A */
+    --accent-foreground: 38 92% 89%;
+    --light-gold: 46 85% 20%; /* Darkened #FCEFCB */
+
+    --muted: 32 20% 20%;
+    --muted-foreground: 38 92% 70%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 32 67% 30%;
+    --input: 32 67% 25%;
+    --ring: 39 79% 60%;
+    --chart-1: 32 67% 50%;
+    --chart-2: 39 79% 60%;
+    --chart-3: 38 92% 30%;
+    --chart-4: 46 85% 20%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .bg-light-gold {
+    background-color: hsl(var(--light-gold));
+  }
+  .text-light-gold {
+    color: hsl(var(--light-gold));
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+/* Making sure motion is safe for users who prefer reduced motion */
+@media (prefers-reduced-motion) {
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-slide-in-right {
+    animation: none;
+  }
+}
