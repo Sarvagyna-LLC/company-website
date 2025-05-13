@@ -66,9 +66,7 @@ export default function HeroSection() {
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[500px]">
                   <DialogHeader>
-                    <VisuallyHidden>
-                      <DialogTitle>Request a Personalized Demo</DialogTitle>
-                    </VisuallyHidden>
+                    <DialogTitle>Request a Personalized Demo</DialogTitle>
                     <DialogDescription className="text-center">
                       Fill out the form below and our team will reach out to schedule your personalized demo.
                     </DialogDescription>
