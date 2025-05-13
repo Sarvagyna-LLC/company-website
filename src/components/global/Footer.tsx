@@ -108,7 +108,7 @@ export default function Footer() {
     }
   ];
 
-  const handleLinkClick = (href: string, isScroll?: boolean, e?: React.MouseEvent) => {
+  const handleLinkClick = (href: string, isScroll?: boolean, e?: React.MouseEvent<HTMLAnchorElement>) => {
     if (isScroll && href.startsWith("#")) {
       e?.preventDefault();
       const sectionId = href.substring(1);
@@ -219,7 +219,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      onClick={(e) => handleLinkClick(link.href, link.isScroll, e)}
+                      onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkClick(link.href, link.isScroll, e)}
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
                       {link.name}

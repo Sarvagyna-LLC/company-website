@@ -2,6 +2,8 @@
 
 import Header from "@/components/global/Header";
 import Footer from "@/components/global/Footer";
+import Breadcrumbs from "@/components/global/Breadcrumbs";
+import RelatedPages from "@/components/global/RelatedPages";
 import { useEffect, useState } from "react";
 
 interface MainLayoutProps {
@@ -18,9 +20,13 @@ export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
+      <div className="container mt-16 pt-4">
+        <Breadcrumbs />
+      </div>
       <main className={`flex-1 transition-opacity duration-500 ${isPageLoaded ? 'opacity-100' : 'opacity-0'}`}>
         {children}
       </main>
+      <RelatedPages />
       <Footer />
     </div>
   );

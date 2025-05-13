@@ -100,7 +100,7 @@ export default function Header() {
                           "cursor-pointer",
                           isActiveRoute(subItem.href) ? "bg-gold-light/30 text-primary" : ""
                         )}
-                        onClick={(e) => handleNavClick(subItem, e)}
+                        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleNavClick(subItem, e)}
                         aria-label={subItem.description}
                       >
                         {subItem.title}
@@ -113,7 +113,7 @@ export default function Header() {
               <Link
                 key={item.title}
                 href={item.href}
-                onClick={(e) => handleNavClick(item, e)}
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleNavClick(item, e)}
                 className={cn(
                   "px-4 py-2 rounded-md text-sm font-medium transition-colors",
                   "hover:bg-accent hover:text-accent-foreground",
@@ -170,7 +170,7 @@ export default function Header() {
                           <Link
                             key={subItem.title}
                             href={subItem.href}
-                            onClick={(e) => {
+                            onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
                               handleNavClick(subItem, e);
                               setIsMobileMenuOpen(false);
                             }}
@@ -189,7 +189,7 @@ export default function Header() {
                     <Link
                       key={item.title}
                       href={item.href}
-                      onClick={(e) => {
+                      onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
                         handleNavClick(item, e);
                         setIsMobileMenuOpen(false);
                       }}
