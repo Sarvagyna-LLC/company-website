@@ -74,7 +74,6 @@ export default function CTASection() {
               </Link>
             </Button>
           </div>
-
           <p className="text-sm text-muted-foreground mt-6">
             No commitment. Explore the future of AI with confidence.
           </p>
