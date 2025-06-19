@@ -139,14 +139,18 @@ export default function TeamSection() {
           <Button
             variant={activeView === "leadership" ? "default" : "outline"}
             onClick={() => setActiveView("leadership")}
-            className={activeView === "leadership" ? "bg-gradient-gold hover:bg-gold-primary hover:opacity-90" : ""}
+            className={`transition-all duration-300 rounded-xl ${activeView === "leadership" 
+              ? 'bg-gradient-gold hover:bg-gold-primary hover:opacity-90' 
+              : 'border-primary text-primary hover:bg-primary hover:text-white'}`}
           >
             Leadership Team
           </Button>
           <Button
             variant={activeView === "all" ? "default" : "outline"}
             onClick={() => setActiveView("all")}
-            className={activeView === "all" ? "bg-gradient-gold hover:bg-gold-primary hover:opacity-90" : ""}
+            className={`transition-all duration-300 rounded-xl ${activeView === "all" 
+              ? 'bg-gradient-gold hover:bg-gold-primary hover:opacity-90' 
+              : 'border-primary text-primary hover:bg-primary hover:text-white'}`}
           >
             All Team Members
           </Button>

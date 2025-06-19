@@ -12,7 +12,7 @@ export default function HeroSection() {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
 
   return (
-    <section className="relative min-h-screen flex items-center py-20 overflow-hidden">
+    <section className="relative min-h-[60vh] flex items-center py-16 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-hero-pattern opacity-70"></div>
@@ -20,14 +20,14 @@ export default function HeroSection() {
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-light-gold/40 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Text content */}
           <div className="animate-slide-up space-y-6">
             <div className="inline-block bg-accent/60 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-medium text-primary mb-4">
               <span className="flex items-center">
                 <Zap className="mr-2 h-4 w-4" />
-                Redefining Enterprise AI Solutions
+                🚀 Next-Gen AI Startup
               </span>
             </div>
 
@@ -36,18 +36,18 @@ export default function HeroSection() {
                 Sarvagyna
               </span>{" "}
               <span className="block mt-2">
-                AI for the Enterprise Future
+                AI Solutions for Tomorrow's Businesses
               </span>
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-lg">
-              Pioneering AI agents, tools, and research that transform how enterprises operate and innovate in the digital age.
+              We're a passionate team building cutting-edge AI tools that help businesses of all sizes automate, optimize, and grow. Join us on our mission to make AI accessible and impactful.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
               <Button
                 onClick={() => scrollToSection("services")}
-                className="bg-gradient-gold hover:bg-gold-primary hover:opacity-90 text-white px-8 py-6 h-auto"
+                className="bg-gradient-gold hover:bg-gold-primary hover:opacity-90 text-white px-6 py-4 h-auto rounded-xl transition-all duration-300 text-base"
                 size="lg"
               >
                 Get Started
@@ -58,7 +58,7 @@ export default function HeroSection() {
                 <DialogTrigger asChild>
                   <Button
                     variant="outline"
-                    className="border-gold-primary text-primary hover:bg-gold-accent/10 px-8 py-6 h-auto"
+                    className="border-primary text-primary hover:bg-primary hover:text-white px-6 py-4 h-auto rounded-xl transition-all duration-300 shadow-sm hover:shadow-md text-base"
                     size="lg"
                   >
                     Request Demo
@@ -77,11 +77,11 @@ export default function HeroSection() {
             </div>
 
             {/* Trust indicators */}
-            <div className="pt-12">
+            <div className="pt-8">
               <p className="text-sm font-medium text-muted-foreground mb-4">
                 Trusted by leading enterprises worldwide
               </p>
-              <div className="flex flex-wrap items-center gap-8">
+              <div className="flex flex-wrap items-center gap-6">
                 {/* Placeholder for company logos - Replace with real logos */}
                 <div className="opacity-60 hover:opacity-100 transition-opacity w-24 h-10 bg-zinc-700/10 rounded flex items-center justify-center font-bold text-primary/70">
                   ACME Inc

@@ -135,10 +135,13 @@ export default function AboutPageSection() {
                 researcher, or future team member, we're always looking for passionate innovators.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Button className="bg-gradient-gold hover:bg-gold-primary hover:opacity-90">
+                <Button className="bg-gradient-gold hover:bg-gold-primary hover:opacity-90 transition-all duration-300 rounded-xl">
                   Explore Careers
                 </Button>
-                <Button className="border-primary text-primary hover:bg-primary/10">
+                <Button 
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-xl shadow-sm hover:shadow-md"
+                >
                   Contact Us
                 </Button>
               </div>

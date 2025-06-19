@@ -18,10 +18,10 @@ export default function AboutSection() {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            About <span className="bg-gradient-gold bg-clip-text text-transparent">Sarvagyna</span>
+            The <span className="bg-gradient-gold bg-clip-text text-transparent">Sarvagyna</span> Story
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Pioneering the future of enterprise AI with innovative solutions that transform industries.
+            We're a fast-growing AI startup on a mission to make cutting-edge artificial intelligence accessible to businesses of all sizes.
           </p>
         </div>
 
@@ -34,9 +34,9 @@ export default function AboutSection() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
                   <ScrollText className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-2">Our Story</h3>
+                  <h3 className="text-2xl font-bold mb-2">From Idea to Impact</h3>
                   <p className="text-muted-foreground">
-                    Founded in 2023 by AI experts and industry veterans with a vision to bridge the gap between cutting-edge AI research and practical enterprise solutions.
+                    Born in 2023 from a shared vision, we're a passionate team of AI enthusiasts and entrepreneurs building the future of business automation, one AI solution at a time.
                   </p>
                 </div>
               </div>
@@ -49,8 +49,8 @@ export default function AboutSection() {
                   <TrendingUp className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Growth</h4>
-                  <p className="text-sm text-muted-foreground">300% YoY</p>
+                  <h4 className="font-semibold">Growing Fast</h4>
+                  <p className="text-sm text-muted-foreground">3x growth in 6 months</p>
                 </div>
               </div>
               <div className="flex gap-4 items-center">
@@ -59,7 +59,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Innovation</h4>
-                  <p className="text-sm text-muted-foreground">15+ AI Patents</p>
+                  <p className="text-sm text-muted-foreground">5+ AI products launched</p>
                 </div>
               </div>
             </div>
@@ -69,10 +69,10 @@ export default function AboutSection() {
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">
-                Empowering Enterprises with Next-Gen AI
+                Building the Future of Business with AI
               </h3>
               <p className="text-muted-foreground">
-                At Sarvagyna, we're on a mission to transform how enterprises operate by providing advanced AI solutions that are both powerful and practical. Our team of world-class AI researchers and engineers work tirelessly to push the boundaries of what's possible.
+                We're not just another AI company - we're a team of dreamers and doers on a mission to make AI work for everyone. Our lean, agile approach allows us to innovate quickly and deliver real value to our customers.
               </p>
             </div>
 

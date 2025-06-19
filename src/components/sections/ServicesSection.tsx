@@ -55,7 +55,8 @@ const ServiceCard = ({
     <CardFooter>
       <Button
         onClick={onCtaClick}
-        className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+        variant="outline"
+        className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-xl shadow-sm hover:shadow-md"
       >
         {ctaText}
       </Button>
@@ -85,66 +86,66 @@ export default function ServicesSection() {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our <span className="bg-gradient-gold bg-clip-text text-transparent">Services</span>
+            Our <span className="bg-gradient-gold bg-clip-text text-transparent">AI Solutions</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive AI solutions designed for enterprises, from autonomous agents to cutting-edge research.
+            Powerful yet affordable AI tools designed for startups and growing businesses. We make advanced AI accessible to everyone.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ServiceCard
-            title="AI Agents"
-            description="Autonomous, intelligent agents that perform complex tasks and streamline business operations."
+            title="AI Assistants"
+            description="Affordable AI assistants that automate routine tasks and boost your team's productivity."
             icon={Bot}
-            badge="Popular"
+            badge="Most Popular"
             features={[
-              "Personal assistants for executives",
-              "Customer service automation",
-              "Intelligent workflow agents",
-              "Multi-agent systems for complex operations",
-              "Contextual adaptation to business domains"
+              "24/7 customer support automation",
+              "Smart email and calendar management",
+              "Automated data entry and processing",
+              "No-code setup and customization",
+              "Seamless integration with your tools"
             ]}
-            ctaText="Learn More"
-            onCtaClick={() => handleLearnMore("AI Agents")}
+            ctaText="Get Started"
+            onCtaClick={() => handleLearnMore("AI Assistants")}
           />
 
           <ServiceCard
-            title="AI Tools & Applications"
-            description="Specialized tools that solve specific business problems with precision and efficiency."
+            title="AI Business Tools"
+            description="Essential AI tools designed specifically for startups and small businesses."
             icon={Wrench}
             features={[
-              "Document analysis and processing",
-              "Predictive analytics dashboards",
-              "Intelligent search solutions",
-              "Decision support systems",
-              "Natural language data querying"
+              "AI-powered document processing",
+              "Customer insights and analytics",
+              "Automated reporting and dashboards",
+              "Affordable monthly subscriptions",
+              "Quick setup with no IT required"
             ]}
-            ctaText="Explore Tools"
-            onCtaClick={() => handleLearnMore("AI Tools")}
+            ctaText="View Tools"
+            onCtaClick={() => handleLearnMore("AI Business Tools")}
           />
 
           <ServiceCard
-            title="AI Research & Development"
-            description="Cutting-edge research into next-generation AI technologies and applications."
+            title="Startup AI Consulting"
+            description="Expert guidance to help you leverage AI for growth and efficiency."
             icon={FlaskConical}
-            badge="Enterprise"
+            badge="New"
             features={[
-              "Custom AI model development",
-              "Industry-specific AI solutions",
-              "Research partnerships",
-              "Ethics and governance frameworks",
-              "Emerging technology exploration"
+              "AI strategy for startups",
+              "Custom AI solution design",
+              "Team training and workshops",
+              "Proof of concept development",
+              "AI implementation support"
             ]}
-            ctaText="Research Offerings"
-            onCtaClick={() => handleLearnMore("AI Research")}
+            ctaText="Book a Call"
+            onCtaClick={() => handleLearnMore("AI Consulting")}
           />
         </div>
 
         {/* Technologies section */}
         <div className="mt-24">
           <h3 className="text-2xl font-bold text-center mb-8">
-            Technologies We Leverage
+            Built with Modern AI Technology
           </h3>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
@@ -185,7 +186,10 @@ export default function ServicesSection() {
                 <Button className="bg-gradient-gold hover:bg-gold-primary hover:opacity-90">
                   Contact Sales
                 </Button>
-                <Button className="border-primary text-primary hover:bg-primary/10">
+                <Button 
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-xl shadow-sm hover:shadow-md"
+                >
                   Download Brochure
                 </Button>
               </div>

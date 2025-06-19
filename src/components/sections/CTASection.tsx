@@ -40,7 +40,7 @@ export default function CTASection() {
             <Button 
               asChild 
               size="lg" 
-              className="bg-gradient-gold hover:bg-gold-primary hover:opacity-90 px-10 py-6 text-lg"
+              className="bg-gradient-gold hover:bg-gold-primary hover:opacity-90 px-10 py-6 text-lg rounded-xl transition-all duration-300"
             >
               <Link href="/demo" className="flex items-center gap-3">
                 <Rocket className="h-5 w-5" />
@@ -53,7 +53,7 @@ export default function CTASection() {
               asChild 
               variant="outline" 
               size="lg" 
-              className="border-primary text-primary hover:bg-primary/10 px-10 py-6 text-lg"
+              className="border-primary text-primary hover:bg-primary hover:text-white px-10 py-6 text-lg rounded-xl transition-all duration-300 shadow-sm hover:shadow-md"
             >
               <Link href="/beta" className="flex items-center gap-3">
                 <Users className="h-5 w-5" />
@@ -66,7 +66,7 @@ export default function CTASection() {
               asChild 
               variant="secondary" 
               size="lg" 
-              className="bg-accent/20 hover:bg-accent/30 px-10 py-6 text-lg"
+              className="bg-accent/20 hover:bg-accent/30 px-10 py-6 text-lg rounded-xl transition-all duration-300"
             >
               <Link href="/careers" className="flex items-center gap-3">
                 <Code className="h-5 w-5" />

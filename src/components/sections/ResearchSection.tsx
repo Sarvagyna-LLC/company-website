@@ -142,7 +142,10 @@ export default function ResearchSection() {
                 <Button className="bg-gradient-gold hover:bg-gold-primary hover:opacity-90">
                   Explore Partnerships
                 </Button>
-                <Button className="border-primary text-primary hover:bg-primary/10">
+                <Button 
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-xl shadow-sm hover:shadow-md"
+                >
                   Download Research Whitepaper
                 </Button>
               </div>
