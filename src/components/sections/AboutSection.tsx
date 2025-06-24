@@ -10,15 +10,15 @@ export default function AboutSection() {
   const [activeTab, setActiveTab] = useState<"mission" | "vision" | "values">("mission");
 
   return (
-    <section id="about" className="py-24 bg-white relative overflow-hidden">
+    <section id="about" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-light-gold/30 rounded-bl-full opacity-70"></div>
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-accent/20 rounded-tr-full opacity-70"></div>
 
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            The <span className="bg-gradient-gold bg-clip-text text-transparent">Sarvagyna</span> Story
+            The <span className="gradient-text">Sarvagyna</span> Story
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             We're a fast-growing AI startup on a mission to make cutting-edge artificial intelligence accessible to businesses of all sizes.
@@ -36,7 +36,7 @@ export default function AboutSection() {
                   <ScrollText className="h-12 w-12 text-primary mx-auto mb-4" />
                   <h3 className="text-2xl font-bold mb-2">From Idea to Impact</h3>
                   <p className="text-muted-foreground">
-                    Born in 2023 from a shared vision, we're a passionate team of AI enthusiasts and entrepreneurs building the future of business automation, one AI solution at a time.
+                    Born in 2025 from a shared vision, we're a passionate team of AI enthusiasts and entrepreneurs building the future of business automation, one AI solution at a time.
                   </p>
                 </div>
               </div>

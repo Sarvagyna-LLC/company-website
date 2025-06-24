@@ -45,9 +45,9 @@ const SUPPORT_CHANNELS = [
 const CONTACT_OPTIONS = [
   {
     title: "Email Support",
-    description: "support@sarvagyna.com",
+    description: "admin@sarvagyna.com",
     icon: Mail,
-    contact: "support@sarvagyna.com"
+    contact: "admin@sarvagyna.com"
   },
   {
     title: "Phone Support",

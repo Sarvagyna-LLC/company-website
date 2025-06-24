@@ -6,38 +6,18 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Award, Mic, Globe } from "lucide-react";
 
-// Predefine static data for faster rendering
-const PRESS_HIGHLIGHTS = [
-  {
-    date: "May 2024",
-    title: "Sarvagyna Wins Global AI Innovation Award",
-    publication: "Tech Innovators Magazine",
-    description: "Recognized for groundbreaking AI solutions transforming enterprise technology.",
-    icon: Award
-  },
-  {
-    date: "March 2024",
-    title: "Revolutionizing AI: An Exclusive Interview",
-    publication: "AI Today Podcast",
-    description: "Our CEO discusses the future of artificial intelligence and ethical AI development.",
-    icon: Mic
-  },
-  {
-    date: "January 2024",
-    title: "Global Expansion and Research Milestones",
-    publication: "International Business Times",
-    description: "Sarvagyna expands international research partnerships and opens new innovation centers.",
-    icon: Globe
-  }
-];
+// Types for press highlights
+type PressHighlight = {
+  date: string;
+  title: string;
+  publication: string;
+  description: string;
+  icon: React.ElementType;
+};
 
-const MEDIA_LOGOS = [
-  "/logos/tech-innovators.svg",
-  "/logos/ai-today.svg", 
-  "/logos/international-business.svg",
-  "/logos/wired.svg",
-  "/logos/forbes.svg"
-];
+// Empty arrays since we don't have press highlights yet
+const PRESS_HIGHLIGHTS: PressHighlight[] = [];
+const MEDIA_LOGOS: string[] = [];
 
 export default function PressPageClient() {
   return (
@@ -47,7 +27,7 @@ export default function PressPageClient() {
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-gold bg-clip-text text-transparent">Press</span> & Media
+              <span className="gradient-text">Press</span> & Media
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Discover the latest news, insights, and media coverage highlighting Sarvagyna&apos;s innovative AI solutions and global impact.
@@ -56,62 +36,56 @@ export default function PressPageClient() {
         </div>
       </section>
 
-      <Suspense fallback={<div className="container mx-auto text-center py-24">Loading press highlights...</div>}>
-        <section className="py-24 bg-white">
-          <div className="container mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              Recent <span className="bg-gradient-gold bg-clip-text text-transparent">Press Highlights</span>
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {PRESS_HIGHLIGHTS.map((highlight, index) => (
-                <div 
-                  key={index} 
-                  className="bg-gold-light/30 rounded-lg p-6 hover:shadow-md transition-all"
-                  style={{ transitionProperty: 'box-shadow, transform' }}
-                >
-                  <div className="flex items-center mb-4">
-                    <highlight.icon className="h-8 w-8 text-primary mr-4" />
-                    <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
-                      {highlight.date}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{highlight.title}</h3>
-                  <p className="text-muted-foreground mb-4">{highlight.description}</p>
-                  <p className="font-medium text-primary">{highlight.publication}</p>
-                </div>
-              ))}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Recent <span className="gradient-text">Press Highlights</span>
+          </h2>
+          
+          <div className="max-w-2xl mx-auto bg-gold-light/30 rounded-lg p-8 text-center">
+            <div className="flex justify-center mb-6">
+              <div className="bg-gold-light/50 p-4 rounded-full">
+                <Award className="h-12 w-12 text-gold-primary" />
+              </div>
             </div>
+            
+            <h3 className="text-2xl font-bold mb-4">
+              Press Coverage Coming Soon
+            </h3>
+            
+            <p className="text-lg mb-6 text-foreground/80">
+              We're working on exciting developments that will be featured in the press soon. 
+              Check back for updates on Sarvagyna's innovations and industry recognition.
+            </p>
           </div>
-        </section>
-      </Suspense>
+        </div>
+      </section>
 
-      <Suspense fallback={<div className="container mx-auto text-center py-24">Loading media logos...</div>}>
-        <section className="py-24 bg-gold-light/10">
-          <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-12">
-              Featured in <span className="bg-gradient-gold bg-clip-text text-transparent">Global Media</span>
-            </h2>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-70 hover:opacity-100 transition-all">
-              {MEDIA_LOGOS.map((logo, index) => (
-                <img 
-                  key={index} 
-                  src={logo} 
-                  alt={`Media Logo ${index + 1}`} 
-                  width={128}
-                  height={64}
-                  loading="lazy"
-                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 transition-all"
-                />
-              ))}
+      <section className="py-24 bg-gold-light/10">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-12">
+            Featured in <span className="gradient-text">Global Media</span>
+          </h2>
+          
+          <div className="max-w-2xl mx-auto bg-white/50 rounded-lg p-8 shadow-sm">
+            <div className="flex justify-center mb-6">
+              <div className="bg-gold-light/50 p-4 rounded-full">
+                <Globe className="h-12 w-12 text-gold-primary" />
+              </div>
             </div>
+            
+            <p className="text-lg mb-4 text-foreground/80">
+              Media coverage and partnerships are in development.
+              Our team is focused on creating innovative AI solutions that will soon be recognized by leading publications.
+            </p>
           </div>
-        </section>
-      </Suspense>
+        </div>
+      </section>
 
       <section className="py-24 bg-white">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">
-            Want to <span className="bg-gradient-gold bg-clip-text text-transparent">Connect</span>?
+            Want to <span className="gradient-text">Connect</span>?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
             For media inquiries, press releases, or interview requests, please contact our media relations team.

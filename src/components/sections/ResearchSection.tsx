@@ -71,18 +71,18 @@ const researchAreas = [
 
 export default function ResearchSection() {
   return (
-    <section className="py-24 bg-gold-light/30">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gold-light/30">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our <span className="bg-gradient-gold bg-clip-text text-transparent">Research Frontiers</span>
+            Our <span className="gradient-text">Research Frontiers</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Pioneering AI research that pushes the boundaries of technological innovation and transforms industries.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {researchAreas.map((area, index) => (
             <HoverCard key={index}>
               <HoverCardTrigger asChild>
@@ -154,19 +154,19 @@ export default function ResearchSection() {
               <div className="grid grid-cols-2 gap-4 w-full max-w-md">
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <h4 className="font-medium text-sm mb-1">Published Papers</h4>
-                  <p className="text-2xl font-bold text-primary">42+</p>
+                  <p className="text-2xl font-bold text-primary">....</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <h4 className="font-medium text-sm mb-1">Research Grants</h4>
-                  <p className="text-2xl font-bold text-primary">15</p>
+                  <p className="text-2xl font-bold text-primary">....</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <h4 className="font-medium text-sm mb-1">Active Projects</h4>
-                  <p className="text-2xl font-bold text-primary">23</p>
+                  <p className="text-2xl font-bold text-primary">5+</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <h4 className="font-medium text-sm mb-1">Collaborations</h4>
-                  <p className="text-2xl font-bold text-primary">8+</p>
+                  <p className="text-2xl font-bold text-primary">....</p>
                 </div>
               </div>
             </div>

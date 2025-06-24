@@ -108,11 +108,11 @@ export default function IndustriesSection() {
   };
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Industries <span className="bg-gradient-gold bg-clip-text text-transparent">Transformed</span>
+            Industries <span className="gradient-text">Transformed</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Our AI solutions are designed to empower organizations across diverse sectors, driving innovation and efficiency.
@@ -124,7 +124,7 @@ export default function IndustriesSection() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {industryBenefits.map((industry, index) => (
             <motion.div 

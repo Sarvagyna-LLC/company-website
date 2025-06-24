@@ -19,7 +19,7 @@ export default function CTASection() {
   };
 
   return (
-    <section className="py-24 bg-gold-light/10">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gold-light/10">
       <div className="container mx-auto px-4">
         <motion.div 
           initial="hidden"
@@ -29,7 +29,7 @@ export default function CTASection() {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to <span className="bg-gradient-gold bg-clip-text text-transparent">Transform</span> Your Business?
+            Ready to <span className="gradient-text">Transform</span> Your Business?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
             Unlock the potential of AI with Sarvagyna. Whether you're looking to innovate, optimize, or revolutionize, we have solutions tailored to your needs.

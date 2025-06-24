@@ -72,7 +72,9 @@ export default {
         },
       },
       backgroundImage: {
-        'gradient-gold': 'linear-gradient(to right, #A86523, #E9A319)',
+        'gradient-gold': 'linear-gradient(90deg, #A86523 0%, #E9A319 50%, #A86523 100%)',
+        'gradient-gold-shine': 'linear-gradient(to right, #A86523, #E9A319, #FAD59A, #E9A319, #A86523)',
+        'gradient-gold-text': 'linear-gradient(to right bottom, #A86523, #E9A319, #FAD59A, #E9A319)',
         'hero-pattern': 'linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(252, 239, 203, 0.8))',
       },
       boxShadow: {

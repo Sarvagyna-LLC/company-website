@@ -1,8 +1,112 @@
+/* stylelint-disable */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* stylelint-enable */
 
 @layer base {
+  @property --pos-x {
+    syntax: '<percentage>';
+    initial-value: 11.14%;
+    inherits: false;
+  }
+
+  @property --pos-y {
+    syntax: '<percentage>';
+    initial-value: 140%;
+    inherits: false;
+  }
+
+  @property --spread-x {
+    syntax: '<percentage>';
+    initial-value: 150%;
+    inherits: false;
+  }
+
+  @property --spread-y {
+    syntax: '<percentage>';
+    initial-value: 180.06%;
+    inherits: false;
+  }
+
+  @property --color-1 {
+    syntax: '<color>';
+    initial-value: #000;
+    inherits: false;
+  }
+
+  @property --color-2 {
+    syntax: '<color>';
+    initial-value: #08012c;
+    inherits: false;
+  }
+
+  @property --color-3 {
+    syntax: '<color>';
+    initial-value: #4e1e40;
+    inherits: false;
+  }
+
+  @property --color-4 {
+    syntax: '<color>';
+    initial-value: #70464e;
+    inherits: false;
+  }
+
+  @property --color-5 {
+    syntax: '<color>';
+    initial-value: #88394c;
+    inherits: false;
+  }
+
+  @property --border-angle {
+    syntax: '<angle>';
+    initial-value: 20deg;
+    inherits: true;
+  }
+
+  @property --border-color-1 {
+    syntax: '<color>';
+    initial-value: hsla(340, 75%, 60%, 0.2);
+    inherits: true;
+  }
+
+  @property --border-color-2 {
+    syntax: '<color>';
+    initial-value: hsla(340, 75%, 40%, 0.75);
+    inherits: true;
+  }
+
+  @property --stop-1 {
+    syntax: '<percentage>';
+    initial-value: 37.35%;
+    inherits: false;
+  }
+
+  @property --stop-2 {
+    syntax: '<percentage>';
+    initial-value: 61.36%;
+    inherits: false;
+  }
+
+  @property --stop-3 {
+    syntax: '<percentage>';
+    initial-value: 78.42%;
+    inherits: false;
+  }
+
+  @property --stop-4 {
+    syntax: '<percentage>';
+    initial-value: 89.52%;
+    inherits: false;
+  }
+
+  @property --stop-5 {
+    syntax: '<percentage>';
+    initial-value: 100%;
+    inherits: false;
+  }
+  
   :root {
     --background: 0 0% 100%;
     --foreground: 32 67% 20%; /* Dark gold for text */
@@ -10,8 +114,6 @@
     --card-foreground: 32 67% 20%;
     --popover: 0 0% 100%;
     --popover-foreground: 32 67% 20%;
-
-    /* Gold theme colors */
     --primary: 32 67% 40%; /* #A86523 */
     --primary-foreground: 0 0% 98%;
     --secondary: 39 79% 50%; /* #E9A319 */
@@ -67,6 +169,7 @@
   }
 }
 
+/* stylelint-disable */
 @layer base {
   * {
     @apply border-border;
@@ -74,6 +177,105 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+/* stylelint-enable */
+
+@layer components {
+  .gradient-button {
+    @apply relative appearance-none cursor-pointer;
+    background: radial-gradient(
+      var(--spread-x) var(--spread-y) at var(--pos-x) var(--pos-y),
+      var(--color-1) var(--stop-1),
+      var(--color-2) var(--stop-2),
+      var(--color-3) var(--stop-3),
+      var(--color-4) var(--stop-4),
+      var(--color-5) var(--stop-5)
+    );
+    transition:
+      --pos-x 0.5s,
+      --pos-y 0.5s,
+      --spread-x 0.5s,
+      --spread-y 0.5s,
+      --color-1 0.5s,
+      --color-2 0.5s,
+      --color-3 0.5s,
+      --color-4 0.5s,
+      --color-5 0.5s,
+      --border-angle 0.5s,
+      --border-color-1 0.5s,
+      --border-color-2 0.5s,
+      --stop-1 0.5s,
+      --stop-2 0.5s,
+      --stop-3 0.5s,
+      --stop-4 0.5s,
+      --stop-5 0.5s;
+  }
+
+  .gradient-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      var(--border-angle),
+      var(--border-color-1),
+      var(--border-color-2)
+    );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .gradient-button:hover {
+    --pos-x: 0%;
+    --pos-y: 91.51%;
+    --spread-x: 120.24%;
+    --spread-y: 103.18%;
+    --color-1: #c96287;
+    --color-2: #c66c64;
+    --color-3: #cc7d23;
+    --color-4: #37140a;
+    --color-5: #000;
+    --border-angle: 190deg;
+    --border-color-1: hsla(340, 78%, 90%, 0.1);
+    --border-color-2: hsla(340, 75%, 90%, 0.6);
+    --stop-1: 0%;
+    --stop-2: 8.8%;
+    --stop-3: 21.44%;
+    --stop-4: 71.34%;
+    --stop-5: 85.76%;
+  }
+
+  .gradient-button-variant {
+    --color-1: #000022;
+    --color-2: #1f3f6d;
+    --color-3: #469396;
+    --color-4: #f1ffa5;
+    --border-angle: 200deg;
+    --border-color-1: hsla(320, 75%, 90%, 0.6);
+    --border-color-2: hsla(320, 50%, 90%, 0.15);
+  }
+
+  .gradient-button-variant:hover {
+    --pos-x: 0%;
+    --pos-y: 95.51%;
+    --spread-x: 110.24%;
+    --spread-y: 110.2%;
+    --color-1: #000020;
+    --color-2: #f1ffa5;
+    --color-3: #469396;
+    --color-4: #1f3f6d;
+    --color-5: #000;
+    --stop-1: 0%;
+    --stop-2: 10%;
+    --stop-3: 35.44%;
+    --stop-4: 71.34%;
+    --stop-5: 90.76%;
+    --border-angle: 210deg;
+    --border-color-1: hsla(320, 75%, 90%, 0.2);
+    --border-color-2: hsla(320, 50%, 90%, 0.75);
   }
 }
 
@@ -84,41 +286,178 @@
   .text-light-gold {
     color: hsl(var(--light-gold));
   }
+  
+  /* Simplified text effects for better performance */
+  .text-gold-gradient {
+    background: linear-gradient(to right, #A86523, #E9A319);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .text-gold-shine {
+    background: linear-gradient(to right, #A86523, #E9A319, #FAD59A);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* Enhanced visible gold gradient */
+  .bg-gradient-gold-visible {
+    background: linear-gradient(135deg, #8B4513, #CD853F, #DAA520, #B8860B, #A0522D);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* Fallback for browsers that don't support background-clip */
+    color: #A86523;
+  }
+  
+  /* Ensure gradient text is visible */
+  .gradient-text-gold {
+    background: linear-gradient(135deg, #8B4513 0%, #CD853F 25%, #DAA520 50%, #B8860B 75%, #A0522D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    /* Strong fallback */
+    font-weight: 600;
+  }
+  
+  /* Support for older browsers */
+  @supports not (background-clip: text) {
+    .gradient-text-gold {
+      color: #A86523;
+    }
+  }
+  
+  /* RELIABLE GOLD TEXT - Always visible */
+  .text-gold-reliable {
+    color: #A86523;
+    background: linear-gradient(90deg, #A86523 0%, #E9A319 50%, #A86523 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Fallback for when gradient fails */
+  @supports not (-webkit-background-clip: text) {
+    .text-gold-reliable {
+      color: #A86523 !important;
+      background: none !important;
+    }
+  }
+  
+  /* Simple gold text without gradient complications */
+  .text-gold-simple {
+    color: #A86523;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(168, 101, 35, 0.3);
+  }
+  
+  /* Global Gradient Text Utility - Proper text gradient */
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-[#A86523] to-[#E9A319];
+  }
+  
+  .gradient-text-reverse {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-[#E9A319] to-[#A86523];
+  }
+  
+  .gradient-text-vertical {
+    @apply text-transparent bg-clip-text bg-gradient-to-b from-[#A86523] to-[#E9A319];
+  }
+  
+  .gradient-text-diagonal {
+    @apply text-transparent bg-clip-text bg-gradient-to-br from-[#A86523] via-[#E9A319] to-[#A86523];
+  }
+  
+  .heading-emphasis {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .heading-emphasis::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #A86523, #E9A319);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .heading-emphasis:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
 
-/* Custom animations */
+/* Simplified animations for better performance */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
 @keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
+  from { transform: translateY(10px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes slideInRight {
-  from { transform: translateX(50px); opacity: 0; }
+  from { transform: translateX(20px); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
 }
 
+/* Removed expensive shimmer animation */
+
+/* Simplified utility classes */
 .animate-fade-in {
-  animation: fadeIn 0.6s ease-in-out;
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 .animate-slide-up {
-  animation: slideUp 0.8s ease-out;
+  animation: slideUp 0.5s ease-out;
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.8s ease-out;
+  animation: slideInRight 0.5s ease-out;
 }
 
 /* Making sure motion is safe for users who prefer reduced motion */
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
   .animate-fade-in,
   .animate-slide-up,
   .animate-slide-in-right {
     animation: none;
   }
+  
+  /* Disable all transitions for reduced motion */
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Add will-change for critical elements to optimize rendering */
+.hero-text {
+  will-change: auto;
+}
+
+/* Optimize backdrop-blur for better performance */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Optimize gradients for better performance */
+.bg-gradient-gold {
+  background: linear-gradient(to right, #A86523, #E9A319);
+}
+
+.bg-gradient-gold-shine {
+  background: linear-gradient(to right, #A86523, #E9A319, #FAD59A);
 }

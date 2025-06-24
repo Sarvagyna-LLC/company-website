@@ -66,7 +66,7 @@ export default function FAQsPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Sarvagyna <span className="bg-gradient-gold bg-clip-text text-transparent">FAQs</span>
+              Sarvagyna <span className="gradient-text">FAQs</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Answers to common questions about our AI solutions and services

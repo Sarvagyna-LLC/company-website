@@ -18,6 +18,9 @@ interface TeamMember {
     linkedin?: string;
     twitter?: string;
     website?: string;
+    instagram?: string;
+    facebook?: string;
+    github?: string;
   };
   skills: string[];
   featured: boolean;
@@ -26,59 +29,80 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: 1,
-    name: "Dr. Aisha Patel",
-    role: "Chief AI Officer & Co-Founder",
-    bio: "Former lead researcher at OpenAI with 15+ years of experience in deep learning and neural networks. PhD from Stanford.",
+    name: "G. Chandu Kumar",
+    role: "Co-Founder",
+    bio: "Student at Parul University. Handles client management and relationships, ensuring smooth business operations.",
     image: "/team/placeholder-1.svg",
     social: {
-      linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com",
-      website: "https://example.com",
+      linkedin: "https://www.linkedin.com/in/chandu-kumar-42514031a/",
+      twitter: "https://twitter.com/chandu-kumar",
+      website: "https://github.com/chandu-kumar",
+      instagram: "https://www.instagram.com/chandu_kumar_42514031a/"
     },
-    skills: ["Neural Networks", "Deep Learning", "Research Leadership"],
+    skills: [],
     featured: true,
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "CEO & Co-Founder",
-    bio: "Serial entrepreneur with three successful tech exits. MBA from Harvard Business School and BS in Computer Science from MIT.",
+    name: "Sarwan Nandh",
+    role: "Co-Founder",
+    bio: "Student at SRM University KTR. A visionary leader focused on building the product and shaping the future of the company.",
     image: "/team/placeholder-2.svg",
     social: {
-      linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com",
+      linkedin: "https://www.linkedin.com/in/sarwannandh/",
+      twitter: "https://twitter.com/sarwannandh",
+      website: "https://sarwan67.com/",
+      instagram: "https://www.instagram.com/sarwannandh/",
+      facebook: "https://www.facebook.com/sarwannandh",
+      github: "https://github.com/sarwannandh67"
     },
-    skills: ["Strategy", "Business Development", "AI Commercialization"],
+    skills: [],
     featured: true,
   },
   {
     id: 3,
-    name: "Dr. Kwame Johnson",
-    role: "Head of AI Research",
-    bio: "Leading expert in reinforcement learning with previous roles at DeepMind and Carnegie Mellon University.",
+    name: "Roudra Ghosal",
+    role: "Team Lead",
+    bio: "Student at SRM University KTR. ",
     image: "/team/placeholder-3.svg",
     social: {
-      linkedin: "https://linkedin.com",
+      linkedin: "https://www.linkedin.com/in/roudra-ghosal/",
       website: "https://example.com",
     },
-    skills: ["Reinforcement Learning", "Computer Vision", "Robotics"],
+    skills: [],
     featured: true,
   },
   {
     id: 4,
-    name: "Sara Rodriguez",
-    role: "VP of Engineering",
-    bio: "20+ years in software engineering leadership at major tech companies, specializing in scalable AI infrastructure.",
-    image: "/team/placeholder-4.svg",
+    name: "Jack Whagan",
+    role: "FullStack Developer",
+    bio: "Leads our responsible AI initiatives. Previously developed AI ethics frameworks for government organizations.",
+    image: "/team/placeholder-6.svg",
     social: {
-      linkedin: "https://linkedin.com",
+      linkedin: "https://www.linkedin.com/in/jackwaghan/",
+      twitter: "https://twitter.com/jackwaghan",
+      website: "https://jackwaghan.com/",
     },
-    skills: ["System Architecture", "MLOps", "Team Leadership"],
+    skills: [],
     featured: true,
   },
   {
     id: 5,
-    name: "David Kim",
+    name: "Anirban Choudhury",
+    role: "VP of Engineering",
+    bio: "20+ years in software engineering leadership at major tech companies, specializing in scalable AI infrastructure.",
+    image: "/team/placeholder-4.svg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/anirbanchoudhury90322b61",
+      instagram: "https://www.instagram.com/anirban_co?igsh=MW1yYWdkZHlpYjhicA==",
+      
+    },
+    skills: [],
+    featured: true,
+  },
+  {
+    id: 6,
+    name: "Abhirudh S",
     role: "Chief Product Officer",
     bio: "Product leader with experience at Google, Microsoft, and startups. Expert in translating AI capabilities into user value.",
     image: "/team/placeholder-5.svg",
@@ -86,12 +110,12 @@ const teamMembers: TeamMember[] = [
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
     },
-    skills: ["Product Strategy", "UX", "AI Products"],
+    skills: [],
     featured: true,
   },
   {
-    id: 6,
-    name: "Emma Wilson",
+    id: 7,
+    name: "Imana Sarkar",
     role: "Director of Ethics & Governance",
     bio: "Leads our responsible AI initiatives. Previously developed AI ethics frameworks for government organizations.",
     image: "/team/placeholder-6.svg",
@@ -100,13 +124,26 @@ const teamMembers: TeamMember[] = [
       twitter: "https://twitter.com",
       website: "https://example.com",
     },
-    skills: ["AI Ethics", "Policy", "Governance"],
+    skills: [],
+    featured: true,
+  },
+  {
+    id: 8,
+    name: "Abishek Skanda G",
+    role: "Director of Ethics & Governance",
+    bio: "Leads our responsible AI initiatives. Previously developed AI ethics frameworks for government organizations.",
+    image: "/team/placeholder-6.svg",
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
+      website: "https://example.com",
+    },
+    skills: [],
     featured: true,
   },
 ];
 
 export default function TeamSection() {
-  const [activeView, setActiveView] = useState<"leadership" | "all">("leadership");
   const [isVisible, setIsVisible] = useState(false);
 
   // Simulate animation on mount
@@ -114,49 +151,28 @@ export default function TeamSection() {
     setIsVisible(true);
   }, []);
 
-  const displayedMembers =
-    activeView === "leadership"
-      ? teamMembers.filter(member => member.featured)
-      : teamMembers;
+  // Display all team members
+  const displayedMembers = teamMembers;
 
   return (
-    <section id="team" className="py-24 bg-gold-light/30 relative overflow-hidden">
+    <section id="team" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gold-light/30 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-40 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl opacity-50"></div>
       <div className="absolute bottom-40 left-0 w-64 h-64 bg-light-gold/50 rounded-full blur-3xl opacity-70"></div>
 
       <div className="container mx-auto relative">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our <span className="bg-gradient-gold bg-clip-text text-transparent">Team</span>
+            Our <span className="gradient-text">Team</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             World-class experts in AI research, engineering, and business leadership driving our vision forward.
           </p>
         </div>
 
-        <div className="mb-12 flex justify-center gap-4">
-          <Button
-            variant={activeView === "leadership" ? "default" : "outline"}
-            onClick={() => setActiveView("leadership")}
-            className={`transition-all duration-300 rounded-xl ${activeView === "leadership" 
-              ? 'bg-gradient-gold hover:bg-gold-primary hover:opacity-90' 
-              : 'border-primary text-primary hover:bg-primary hover:text-white'}`}
-          >
-            Leadership Team
-          </Button>
-          <Button
-            variant={activeView === "all" ? "default" : "outline"}
-            onClick={() => setActiveView("all")}
-            className={`transition-all duration-300 rounded-xl ${activeView === "all" 
-              ? 'bg-gradient-gold hover:bg-gold-primary hover:opacity-90' 
-              : 'border-primary text-primary hover:bg-primary hover:text-white'}`}
-          >
-            All Team Members
-          </Button>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedMembers.map((member, index) => (
             <Card
               key={member.id}

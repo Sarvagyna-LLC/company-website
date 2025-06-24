@@ -82,21 +82,21 @@ export default function ServicesSection() {
   };
 
   return (
-    <section id="services" className="py-24 bg-gold-light/30">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
+    <section id="services" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gold-light/30">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our <span className="bg-gradient-gold bg-clip-text text-transparent">AI Solutions</span>
+            Our <span className="gradient-text">AI Solutions</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Powerful yet affordable AI tools designed for startups and growing businesses. We make advanced AI accessible to everyone.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <ServiceCard
-            title="AI Assistants"
-            description="Affordable AI assistants that automate routine tasks and boost your team's productivity."
+            title="AI Agents and Automations for SMBs"
+            description="Affordable AI agents that automate routine tasks and boost your small-to-medium business productivity."
             icon={Bot}
             badge="Most Popular"
             features={[
@@ -106,13 +106,13 @@ export default function ServicesSection() {
               "No-code setup and customization",
               "Seamless integration with your tools"
             ]}
-            ctaText="Get Started"
-            onCtaClick={() => handleLearnMore("AI Assistants")}
+            ctaText="Book Demo"
+            onCtaClick={() => handleLearnMore("AI Agents for SMBs")}
           />
 
           <ServiceCard
-            title="AI Business Tools"
-            description="Essential AI tools designed specifically for startups and small businesses."
+            title="AI Agents and Automations for Startups"
+            description="Essential AI agents designed specifically for startups and growing businesses."
             icon={Wrench}
             features={[
               "AI-powered document processing",
@@ -121,24 +121,24 @@ export default function ServicesSection() {
               "Affordable monthly subscriptions",
               "Quick setup with no IT required"
             ]}
-            ctaText="View Tools"
-            onCtaClick={() => handleLearnMore("AI Business Tools")}
+            ctaText="Book Demo"
+            onCtaClick={() => handleLearnMore("AI Agents for Startups")}
           />
 
           <ServiceCard
-            title="Startup AI Consulting"
-            description="Expert guidance to help you leverage AI for growth and efficiency."
+            title="Research and Development on LLMs"
+            description="Cutting-edge research and development focused on Large Language Models for your business needs."
             icon={FlaskConical}
             badge="New"
             features={[
-              "AI strategy for startups",
-              "Custom AI solution design",
-              "Team training and workshops",
+              "Custom LLM fine-tuning",
+              "Domain-specific model development",
+              "Research partnerships",
               "Proof of concept development",
-              "AI implementation support"
+              "Integration with existing systems"
             ]}
-            ctaText="Book a Call"
-            onCtaClick={() => handleLearnMore("AI Consulting")}
+            ctaText="Book Demo"
+            onCtaClick={() => handleLearnMore("LLM Research")}
           />
         </div>
 

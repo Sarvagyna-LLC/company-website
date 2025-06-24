@@ -81,14 +81,41 @@ const nextConfig = {
 
     return config;
   },
-  // Preload critical assets
+  // Optimized headers for bfcache compatibility
   headers: async () => [
+    {
+      source: '/(.*)',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=0, must-revalidate',
+        },
+      ],
+    },
     {
       source: '/_next/static/:path*',
       headers: [
         {
           key: 'Cache-Control',
           value: 'public, max-age=31536000, immutable',
+        },
+      ],
+    },
+    {
+      source: '/favicon/:path*',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=86400',
+        },
+      ],
+    },
+    {
+      source: '/:path*\\.(png|jpg|jpeg|gif|webp|svg|ico)',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=86400',
         },
       ],
     },
@@ -102,4 +129,4 @@ const nextConfig = {
   ],
 };
 
-module.exports = withBundleAnalyzer(nextConfig); 
+module.exports = withBundleAnalyzer(nextConfig);

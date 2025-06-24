@@ -41,7 +41,7 @@ export function Navbar() {
 
   // Handle scroll event to change navbar style
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (e: Event) => {
       setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
@@ -97,7 +97,7 @@ export function Navbar() {
       <div className="container flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold bg-gradient-gold bg-clip-text text-transparent">
+          <span className="text-2xl font-bold gradient-text">
             Lago
           </span>
         </Link>
@@ -118,7 +118,7 @@ export function Navbar() {
                 ) : (
                   <Link
                     href={item.href}
-                    onClick={(e) => handleNavClick(e, item)}
+                    onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleNavClick(e, item)}
                     className="text-sm font-medium hover:text-primary transition-colors"
                     aria-label={`Navigate to ${item.name}`}
                   >
@@ -133,7 +133,7 @@ export function Navbar() {
                       <Link
                         key={subItem.name}
                         href={subItem.href}
-                        onClick={(e) => {
+                        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
                           handleNavClick(e, subItem);
                           setOpenDropdown(null);
                         }}
@@ -165,7 +165,7 @@ export function Navbar() {
           <SheetContent>
             <nav className="flex flex-col h-full">
               <div className="flex justify-between items-center py-4 border-b">
-                <span className="text-lg font-bold bg-gradient-gold bg-clip-text text-transparent">
+                <span className="text-lg font-bold gradient-text">
                   Lago
                 </span>
               </div>
@@ -183,7 +183,7 @@ export function Navbar() {
                             <SheetTrigger key={subItem.name} asChild>
                               <Link
                                 href={subItem.href}
-                                onClick={(e) => {
+                                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
                                   const sheetTrigger = e.currentTarget.closest('[data-radix-sheet-trigger]');
                                   if (sheetTrigger) {
                                     (sheetTrigger as HTMLElement).click();
@@ -202,7 +202,7 @@ export function Navbar() {
                       <SheetTrigger asChild>
                         <Link
                           href={item.href}
-                          onClick={(e) => {
+                          onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
                             const sheetTrigger = e.currentTarget.closest('[data-radix-sheet-trigger]');
                             if (sheetTrigger) {
                               (sheetTrigger as HTMLElement).click();

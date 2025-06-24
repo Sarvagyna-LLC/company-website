@@ -67,15 +67,15 @@ const TeamActionButtons = ({ variant = "default" }: TeamActionButtonsProps) => {
     <div className="flex justify-center gap-4">
       <Button 
         onClick={handleViewTeam}
-        className="bg-gradient-gold hover:bg-gold-primary hover:opacity-90 px-8 py-3"
+        className="bg-gradient-gold hover:bg-gold-primary hover:opacity-90 hover:shadow-md transition-all duration-300 px-8 py-3"
       >
-        <Users className="mr-2 h-5 w-5" /> View Team
+        <Users className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:scale-110" /> View Team
       </Button>
       <Button 
         onClick={handleViewTeam}
-        className="border border-gold-primary text-primary hover:bg-gold-accent/10 px-8 py-3"
+        className="border border-gold-primary bg-gold-light/50 text-gold-primary hover:bg-gold-accent/30 hover:text-gold-primary hover:border-gold-primary/80 hover:shadow-md transition-all duration-300 px-8 py-3"
       >
-        <Award className="mr-2 h-5 w-5" /> Our Achievements
+        <Award className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:scale-110" /> Our Achievements
       </Button>
     </div>
   );

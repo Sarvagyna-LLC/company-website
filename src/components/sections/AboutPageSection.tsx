@@ -30,35 +30,35 @@ const companyValues = [
 
 const milestones = [
   {
-    year: 2020,
+    year: "March 2025",
     title: "Founding",
     description: "Established with a vision to revolutionize AI technology and its applications."
   },
   {
-    year: 2021,
-    title: "First Major Research Grant",
-    description: "Received significant funding for advanced machine learning research."
+    year: "May 2025",
+    title: "Idea Finalized",
+    description: "Completed the conceptualization and planning of our core AI solutions."
   },
   {
-    year: 2022,
-    title: "Industry Partnerships",
-    description: "Launched collaborative projects with leading tech and research institutions."
+    year: "June 2025",
+    title: "Team Formation",
+    description: "Assembled our talented team of AI researchers, engineers, and business experts."
   },
   {
-    year: 2023,
-    title: "Global Expansion",
-    description: "Expanded operations and research capabilities internationally."
+    year: "July 2025",
+    title: "First Release",
+    description: "Preparing to launch version 0.1 of our AI platform and solutions."
   }
 ];
 
 export default function AboutPageSection() {
   return (
-    <section className="py-24 bg-gold-light/30">
-      <div className="container mx-auto">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gold-light/30">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Company Introduction */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            About <span className="bg-gradient-gold bg-clip-text text-transparent">Sarvagyna</span>
+            About <span className="gradient-text">Sarvagyna</span>
           </h1>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
             We are a pioneering AI research and solutions company dedicated to transforming industries 
@@ -70,7 +70,7 @@ export default function AboutPageSection() {
         {/* Company Values */}
         <div className="mb-24">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Our Core <span className="bg-gradient-gold bg-clip-text text-transparent">Values</span>
+            Our Core <span className="gradient-text">Values</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {companyValues.map((value, index) => (
@@ -95,7 +95,7 @@ export default function AboutPageSection() {
         {/* Company Milestones */}
         <div className="mb-24">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Our <span className="bg-gradient-gold bg-clip-text text-transparent">Journey</span>
+            Our <span className="gradient-text">Journey</span>
           </h2>
           <div className="relative">
             <div className="absolute inset-0 flex items-center justify-center">
@@ -150,19 +150,19 @@ export default function AboutPageSection() {
               <div className="grid grid-cols-2 gap-4 w-full max-w-md">
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <h4 className="font-medium text-sm mb-1">Team Members</h4>
-                  <p className="text-2xl font-bold text-primary">120+</p>
+                  <p className="text-2xl font-bold text-primary">5+</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <h4 className="font-medium text-sm mb-1">Research Projects</h4>
-                  <p className="text-2xl font-bold text-primary">50+</p>
+                  <p className="text-2xl font-bold text-primary">1+</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <h4 className="font-medium text-sm mb-1">Patents</h4>
-                  <p className="text-2xl font-bold text-primary">15</p>
+                  <p className="text-2xl font-bold text-primary">....</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <h4 className="font-medium text-sm mb-1">Global Offices</h4>
-                  <p className="text-2xl font-bold text-primary">5</p>
+                  <p className="text-2xl font-bold text-primary">....</p>
                 </div>
               </div>
             </div>

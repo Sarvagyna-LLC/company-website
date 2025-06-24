@@ -27,7 +27,7 @@ const jobListings = [
   {
     id: 2,
     title: 'Senior AI Software Engineer',
-    location: 'San Francisco, CA',
+    location: 'Ongole, Andhra Pradesh',
     type: 'Full-time',
     description: 'Join our team to build scalable AI-powered applications and develop robust machine learning infrastructure.',
     requirements: [
@@ -102,10 +102,10 @@ export default function CareersSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-12 md:mb-8 sm:mb-12 md:mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Join in <span className="bg-gradient-gold bg-clip-text text-transparent">Our Team</span>
+            Join in <span className="gradient-text">Our Team</span>
           </h2>
           <p className="text-base sm:text-lg text-foreground/80 dark:text-foreground/70 max-w-2xl mx-auto">
             Be part of a cutting-edge team transforming industries through AI. We're always looking for passionate innovators.

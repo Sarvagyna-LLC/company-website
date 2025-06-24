@@ -24,7 +24,7 @@ export default function TeamLandingPage() {
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Meet the <span className="bg-gradient-gold bg-clip-text text-transparent">Visionaries</span> Behind Sarvagyna
+              Meet the <span className="gradient-text">Visionaries</span> Behind Sarvagyna
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               A diverse collective of AI researchers, engineers, and thought leaders united by a mission to transform enterprise innovation through cutting-edge artificial intelligence.
@@ -67,7 +67,7 @@ export default function TeamLandingPage() {
       <section className="py-24 bg-gold-light/20">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Want to <span className="bg-gradient-gold bg-clip-text text-transparent">Join Us</span>?
+            Want to <span className="gradient-text">Join Us</span>?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
             We're always looking for exceptional talent who are passionate about pushing the boundaries of AI.

@@ -117,9 +117,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gold-light/40 border-t border-border py-16">
-      <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+    <footer className="bg-gold-light/40 border-t border-border py-8 sm:py-12 md:py-16">
+      <div className="container px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 sm:gap-8 mb-8">
           {/* Company Info */}
           <div className="col-span-1 lg:col-span-2">
             <Link href="/">
@@ -139,29 +139,29 @@ export default function Footer() {
             </p>
 
             {/* Contact Info */}
-            <div className="space-y-3 mb-6">
+            <div className="space-y-2 sm:space-y-3 mt-4 sm:mt-6">
               <div className="flex items-center gap-2 text-sm">
-                <Mail className="h-4 w-4 text-primary" />
-                <a href="mailto:info@lago.com" className="hover:text-primary transition-colors">
-                  info@sarvagyna.com
+                <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                <a href="mailto:admin@sarvagyna.com" className="hover:text-primary transition-colors">
+                  admin@sarvagyna.com
                 </a>
               </div>
               <div className="flex items-center gap-2 text-sm">
-                <Phone className="h-4 w-4 text-primary" />
-                <a href="tel:+15555555555" className="hover:text-primary transition-colors">
-                  +1 (555) 555-5555
+                <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                <a href="tel:+919704736991" className="hover:text-primary transition-colors">
+                  +91 9704736991
                 </a>
               </div>
               <div className="flex items-start gap-2 text-sm">
                 <MapPin className="h-4 w-4 text-primary mt-1" />
                 <span>
-                  123 Innovation Street, Tech City, CA 94103, USA
+                  Ongole, Andhra Pradesh, India, 523001.
                 </span>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 mt-4 sm:mt-6">
               <a
                 href="https://facebook.com"
                 target="_blank"
@@ -210,30 +210,108 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Footer Links */}
-          {footerLinks.map((group) => (
-            <div key={group.title} className="col-span-1">
-              <h3 className="font-semibold text-lg mb-4">{group.title}</h3>
-              <ul className="space-y-3">
-                {group.links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkClick(link.href, link.isScroll, e)}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          {/* Footer Links - Combined in a single column with grid */}
+          <div className="col-span-1 md:col-span-1 lg:col-span-1">
+            <div className="grid grid-cols-2 gap-6">
+              {/* Company Links */}
+              <div>
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-4">{footerLinks[0].title}</h3>
+                <ul className="space-y-2 sm:space-y-3">
+                  {footerLinks[0].links.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkClick(link.href, link.isScroll, e)}
+                        className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              {/* Services Links */}
+              <div>
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-4">{footerLinks[1].title}</h3>
+                <ul className="space-y-2 sm:space-y-3">
+                  {footerLinks[1].links.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkClick(link.href, link.isScroll, e)}
+                        className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          ))}
+          </div>
+          
+          {/* Resources, Legal, and Connect Links */}
+          <div className="col-span-1 md:col-span-1 lg:col-span-1">
+            <div className="grid grid-cols-2 gap-6">
+              {/* Resources Links */}
+              <div>
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-4">{footerLinks[2].title}</h3>
+                <ul className="space-y-2 sm:space-y-3">
+                  {footerLinks[2].links.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkClick(link.href, link.isScroll, e)}
+                        className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                
+                {/* Connect Links */}
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-4 mt-6">{footerLinks[4].title}</h3>
+                <ul className="space-y-2 sm:space-y-3">
+                  {footerLinks[4].links.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkClick(link.href, link.isScroll, e)}
+                        className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              {/* Legal Links */}
+              <div>
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-4">{footerLinks[3].title}</h3>
+                <ul className="space-y-2 sm:space-y-3">
+                  {footerLinks[3].links.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkClick(link.href, link.isScroll, e)}
+                        className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
 
           {/* Newsletter */}
           <div className="col-span-1 lg:col-span-1">
-            <h3 className="font-semibold text-lg mb-4">Stay Updated</h3>
-            <p className="text-muted-foreground mb-4 text-sm">
+            <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-4">Stay Updated</h3>
+            <p className="text-muted-foreground text-xs sm:text-sm mb-4">
               Subscribe to our newsletter to get the latest updates on AI innovation.
             </p>
 
@@ -273,12 +351,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-8 sm:mt-12 md:mt-16 pt-4 sm:pt-6 md:pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
+          <p className="text-xs sm:text-sm text-muted-foreground">
             © {new Date().getFullYear()} Sarvagyna. All rights reserved.
           </p>
 
-          <div className="flex space-x-6 text-sm">
+          <div className="flex flex-wrap justify-center md:justify-end gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm">
             {[
               { name: "Privacy Policy", href: "/privacy" },
               { name: "Terms of Service", href: "/terms" },
@@ -288,7 +366,7 @@ export default function Footer() {
               <Link 
                 key={link.href} 
                 href={link.href} 
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
               >
                 {link.name}
               </Link>

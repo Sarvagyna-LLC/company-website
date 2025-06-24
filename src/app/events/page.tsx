@@ -24,7 +24,7 @@ const UPCOMING_EVENTS = [
   {
     title: "AI Innovation Summit",
     date: "September 15-17, 2024",
-    location: "San Francisco, CA",
+    location: "Ongole, Andhra Pradesh",
     type: "In-Person Conference",
     icon: Rocket
   },

@@ -7,6 +7,8 @@ import {
   Rocket, 
   CheckCircle 
 } from "lucide-react";
+import { GradientButton } from "@/components/ui/gradient-button";
+import { Demo } from "@/components/ui/demo";
 
 export const metadata: Metadata = {
   title: "Sarvagyna | Book a Demo",
@@ -143,12 +145,9 @@ export default function BookDemoPage() {
               </div>
             </div>
             <div className="mt-8 text-center">
-              <button 
-                type="submit" 
-                className="bg-gradient-gold hover:opacity-90 px-12 py-4 text-white rounded-lg text-lg"
-              >
+              <GradientButton type="submit">
                 Schedule Demo
-              </button>
+              </GradientButton>
             </div>
           </form>
         </div>
@@ -173,6 +172,22 @@ export default function BookDemoPage() {
           </div>
         </div>
       </section>
+
+      <section className="py-24 bg-gold-light/10">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Our New <span className="bg-gradient-gold bg-clip-text text-transparent">Gradient Buttons</span>
+          </h2>
+          
+          <div className="bg-white rounded-lg p-8 shadow-md">
+            <h3 className="text-xl font-medium mb-6 text-center">Button Variants</h3>
+            <Demo />
+            <div className="mt-8 text-center">
+              <p className="text-muted-foreground mb-4">Try hovering over the buttons to see the gradient animation effect</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </MainLayout>
   );
-} 
+}

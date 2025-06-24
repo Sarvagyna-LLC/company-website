@@ -99,13 +99,13 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-12 md:mb-8 sm:mb-12 md:mb-16"
         >
           <h2 
             id="contact-section-heading"
             className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4"
           >
-            Get <span className="bg-gradient-gold bg-clip-text text-transparent"> in Touch</span>
+            Get <span className="gradient-text">in Touch</span>
           </h2>
           <p className="text-base sm:text-lg text-foreground/80 dark:text-foreground/70 max-w-2xl mx-auto">
             Have questions about our AI technologies, services, or want to explore potential collaborations? We're here to help you navigate the AI landscape.
@@ -131,8 +131,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Address</h3>
-                  <p className="text-muted-foreground">123 AI Drive, Suite 200</p>
-                  <p className="text-muted-foreground">San Francisco, CA 94105</p>
+                  <p className="text-muted-foreground">Ongole</p>
+                  <p className="text-muted-foreground">Andhra Pradesh, India, 523001</p>
                 </div>
               </div>
             </address>
@@ -148,10 +148,7 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-semibold text-foreground">Email</h3>
                   <p className="text-muted-foreground">
-                    <a href="mailto:info@sarvagyna.com" className="hover:underline">info@sarvagyna.com</a>
-                  </p>
-                  <p className="text-muted-foreground">
-                    <a href="mailto:support@sarvagyna.com" className="hover:underline">support@sarvagyna.com</a>
+                    <a href="mailto:admin@sarvagyna.com" className="hover:underline">admin@sarvagyna.com</a>
                   </p>
                 </div>
               </div>
@@ -168,10 +165,7 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-semibold text-foreground">Phone</h3>
                   <p className="text-muted-foreground">
-                    <a href="tel:+15551234567" className="hover:underline">+1 (555) 123-4567</a>
-                  </p>
-                  <p className="text-muted-foreground">
-                    <a href="tel:+15559876543" className="hover:underline">+1 (555) 987-6543</a>
+                    <a href="tel:+919704736991" className="hover:underline">+91 97047 36991</a>
                   </p>
                 </div>
               </div>
